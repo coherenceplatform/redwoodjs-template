@@ -1,0 +1,17 @@
+backend:
+  type: backend
+  index_file_name: index.html
+  #url_path: /api
+  url_path: /
+  repo_path: backend
+  #migration: ["rails", "db:migrate"]
+
+  local_packages: ["/app/node_modules"]
+
+  dev: ["yarn", "rw", "dev"]
+  prod: ["yarn", "rw-server", "api", "--port", "8911"]
+  
+  system:
+    dev:
+      port: 3001
+
