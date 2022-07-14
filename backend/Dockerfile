@@ -2,7 +2,7 @@
 # Base
 ###########################################################################################
 
-FROM node:14-alpine as base
+FROM node:14.19.3-buster as base
 WORKDIR /app
 
 ARG NODE_ENV
@@ -55,7 +55,7 @@ RUN yarn rw build api
 # Runner
 ###########################################################################################
 
-FROM node:14-alpine
+FROM node:14.19.3-buster
 WORKDIR /app
 
 #ENV DATABASE_URL=$DATABASE_URL
@@ -78,7 +78,7 @@ RUN yarn install
 # Install additional dependencies
 RUN yarn add @redwoodjs/api-server @redwoodjs/internal
 
-EXPOSE 8911
+#EXPOSE 8911
 #CMD []
 ##ENTRYPOINT [ "yarn", "rw-server", "--port", "8911" ]
 #ENTRYPOINT [ "yarn", "rw-server", "api", "--port", "8911" ]
