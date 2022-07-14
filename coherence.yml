@@ -10,7 +10,7 @@ backend:
 
   dev: ["yarn", "rw", "dev"]
   #  prod: ["yarn", "rw-server", "api", "--port", "8911"]
-  prod: ["yarn", "rw-server", "api", "--port", "8080"]
+  prod: ["PORT=8080 yarn", "rw-server", "api", "--port", "8080"]
   
   system:
     dev:
