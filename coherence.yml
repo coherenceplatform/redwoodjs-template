@@ -10,9 +10,14 @@ backend:
 
   dev: ["yarn", "rw", "dev"]
   #  prod: ["yarn", "rw-server", "api", "--port", "8911"]
-  prod: ["PORT=8080 yarn", "rw-server", "api", "--port", "8080"]
+  prod: ["PORT=8911 DATABASE_URL=file:./dev.db LOG_LEVEL=debug yarn", "rw-server", "api", "--port", "8911"]
   
   system:
     dev:
       port: 3001
 
+      #  resources:
+      #  - name: db1
+      #    engine: postgres
+      #    version: 13
+      #    type: database

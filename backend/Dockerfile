@@ -67,7 +67,8 @@ COPY api/package.json .
 COPY graphql.config.js .
 COPY redwood.toml .
 COPY .env.defaults .
-COPY .env .
+RUN touch dev.db
+#COPY .env .
 #COPY .yarn .yarn     # @todo: Fix issue with @prisma/client missing when using yarn 3.x
 #COPY .yarnrc.yml .   # @todo: Fix issue with @prisma/client missing when using yarn 3.x
 
@@ -77,8 +78,7 @@ RUN yarn install
 # Install additional dependencies
 RUN yarn add @redwoodjs/api-server @redwoodjs/internal
 
-#EXPOSE 8911
-#CMD []
-
+EXPOSE 8911
+CMD []
 ##ENTRYPOINT [ "yarn", "rw-server", "--port", "8911" ]
-# ENTRYPOINT [ "yarn", "rw-server", "api", "--port", "8911" ]
+ENTRYPOINT [ "yarn", "rw-server", "api", "--port", "8911" ]
