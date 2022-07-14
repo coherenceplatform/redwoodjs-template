@@ -79,6 +79,7 @@ RUN yarn install
 RUN yarn add @redwoodjs/api-server @redwoodjs/internal
 
 EXPOSE 8911
-CMD []
+#CMD []
 ##ENTRYPOINT [ "yarn", "rw-server", "--port", "8911" ]
-ENTRYPOINT [ "yarn", "rw-server", "api", "--port", "8911" ]
+#ENTRYPOINT [ "yarn", "rw-server", "api", "--port", "8911" ]
+CMD [ "yarn", "rw-server", "api", "--port", "8911" ]
