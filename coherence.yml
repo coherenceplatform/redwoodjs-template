@@ -16,6 +16,8 @@ backend:
   system:
     dev:
       port: 8911
+    prod:
+      port: 8911
 
       #  resources:
       #  - name: db1
