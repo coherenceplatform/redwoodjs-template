@@ -8,7 +8,7 @@ backend:
 
   local_packages: ["/app/node_modules"]
 
-  dev: ["yarn", "rw", "dev"]
+  dev: ["PORT=8911 yarn", "rw", "dev"]
   #  prod: ["yarn", "rw-server", "api", "--port", "8911"]
   prod: ["PORT=8911 DATABASE_URL=file:./dev.db LOG_LEVEL=debug yarn", "rw-server", "api", "--port", "8911"]
   
