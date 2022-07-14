@@ -9,7 +9,8 @@ backend:
   local_packages: ["/app/node_modules"]
 
   dev: ["yarn", "rw", "dev"]
-  prod: ["yarn", "rw-server", "api", "--port", "8911"]
+  #  prod: ["yarn", "rw-server", "api", "--port", "8911"]
+  prod: ["yarn", "rw-server", "api", "--port", "8080"]
   
   system:
     dev:
