@@ -6,8 +6,8 @@ frontend:
   assets_path: dist
   local_packages: ["/app/node_modules"]
   install: ["yarn", "install"]
-  build: ["yarn", "build"]
-  dev: ["yarn", "dev"]
+  build: ["yarn", "rw", "build", "web"]
+  dev: ["yarn", "rw", "dev"]
 
   system:
     dev:
