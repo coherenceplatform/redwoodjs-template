@@ -47,4 +47,5 @@ RUN yarn rw build web
 
 # Manually adding CMD instruction (from upstream) to bring in for analyzing
 #CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
+#CMD ["/bin/sh", "-c", "sleep 10000"]
 
