@@ -37,7 +37,7 @@ RUN yarn rw build web
 # Runner
 ###########################################################################################
 
-####FROM nginx
+#FROM nginx
 
 # Copy dist
 #COPY --from=build /app/web/dist /app/web/dist
