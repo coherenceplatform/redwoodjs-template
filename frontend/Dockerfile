@@ -24,7 +24,7 @@ RUN yarn install
 # Build
 ###########################################################################################
 
-FROM base as build
+####FROM base as build
 
 # Copy
 COPY api api
@@ -37,15 +37,14 @@ RUN yarn rw build web
 # Runner
 ###########################################################################################
 
-FROM nginx
+####FROM nginx
 
 # Copy dist
-COPY --from=build /app/web/dist /app/web/dist
-COPY config/nginx.conf /etc/nginx/conf.d/default.conf
+#COPY --from=build /app/web/dist /app/web/dist
+#COPY config/nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 8910
+#EXPOSE 8910
 
 # Manually adding CMD instruction (from upstream) to bring in for analyzing
-CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
-#CMD []
-#ENTRYPOINT [ "yarn", "rw-server", "web"]
+#CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
+
