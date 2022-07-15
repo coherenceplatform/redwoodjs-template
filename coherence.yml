@@ -4,7 +4,7 @@ frontend:
   url_path: /
   repo_path: frontend
   assets_path: dist
-  local_packages: ["node_modules"]
+  local_packages: ["/app/node_modules"]
   install: ["yarn", "install"]
   build: ["yarn", "build"]
   dev: ["yarn", "dev"]
